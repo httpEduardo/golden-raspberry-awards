@@ -86,4 +86,3 @@ ng e2e
 
 ### Notas Adicionais
 - Certifique-se de que o `CommonModule` e `FormsModule` estão importados onde necessário para suportar diretivas como `*ngIf`, `*ngFor`, e `[(ngModel)]`.
-- Para mais informações sobre o Angular CLI, visite [Angular CLI Overview and Command Reference](https://angular.io/cli).
