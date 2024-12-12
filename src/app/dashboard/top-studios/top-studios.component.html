@@ -1,0 +1,17 @@
+<h2>Top Studios</h2>
+<div *ngIf="error" class="alert alert-danger">{{ error }}</div>
+<table *ngIf="!error && studios.length > 0" class="table table-striped">
+  <thead>
+    <tr>
+      <th>Studio</th>
+      <th>Win Count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let studio of studios">
+      <td>{{ studio.name }}</td>
+      <td>{{ studio.winCount }}</td>
+    </tr>
+  </tbody>
+</table>
+<div *ngIf="!error && studios.length === 0" class="alert alert-info">No data available.</div>

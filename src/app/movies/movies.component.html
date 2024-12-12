@@ -1,0 +1,22 @@
+<h2>All Movies</h2>
+
+<div *ngIf="error" class="alert alert-danger">{{ error }}</div>
+
+<table *ngIf="!error && movies.length > 0" class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Year</th>
+      <th>Title</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let movie of movies">
+      <td>{{ movie.id }}</td>
+      <td>{{ movie.year }}</td>
+      <td>{{ movie.title }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<div *ngIf="!error && movies.length === 0" class="alert alert-info">No movies available.</div>

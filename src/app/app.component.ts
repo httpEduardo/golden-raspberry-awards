@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule } from '@angular/router';  // Importando o RouterModule
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
+  standalone: true,  // AppComponent sendo standalone
+  imports: [RouterModule],  // Importando RouterModule para o router-outlet
 })
 export class AppComponent {
   title = 'golden-raspberry-awards';
