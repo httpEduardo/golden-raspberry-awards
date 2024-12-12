@@ -1,59 +1,89 @@
-# GoldenRaspberryAwards
+### Golden Raspberry Awards Dashboard
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.4.
+Este projeto é um painel para exibir informações sobre o Golden Raspberry Awards, incluindo vencedores por ano, intervalos de produtores, estúdios com mais vitórias, e mais. Foi desenvolvido utilizando o Angular CLI (versão 19.0.4) e integra-se com uma API backend para recuperar os dados.
 
-## Development server
+---
 
-To start a local development server, run:
+### Funcionalidades Principais
+- Listar anos com múltiplos vencedores.
+- Mostrar os três estúdios com mais vitórias.
+- Exibir os intervalos máximos e mínimos de vitórias de produtores.
+- Pesquisar filmes vencedores por ano.
 
-```bash
+---
+
+### Servidor de Desenvolvimento
+Para iniciar o servidor de desenvolvimento local, execute:
+
+```
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Depois, acesse [http://localhost:4200/](http://localhost:4200/) no navegador. A aplicação será recarregada automaticamente sempre que você modificar qualquer arquivo fonte.
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### Configuração da API
+Este projeto utiliza a seguinte API backend: `https://challenge.outsera.tech/api/movies`.
 
-```bash
-ng generate component component-name
+Certifique-se de que a API está funcional e que a conexão está configurada corretamente no arquivo `movies.service.ts`.
+
+---
+
+### Geração de Código (Code Scaffolding)
+Para criar novos componentes, serviços ou outras partes do projeto, utilize:
+
+```
+ng generate component nome-do-componente
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Para uma lista completa de opções disponíveis:
 
-```bash
+```
 ng generate --help
 ```
 
-## Building
+---
 
-To build the project run:
+### Compilação do Projeto
+Para compilar a aplicação para produção:
 
-```bash
-ng build
+```
+ng build --prod
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Os arquivos de saída serão gerados no diretório `dist/`.
 
-## Running unit tests
+---
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+### Executando Testes Unitários
+Para rodar os testes unitários com o Karma, execute:
 
-```bash
+```
 ng test
 ```
 
-## Running end-to-end tests
+---
 
-For end-to-end (e2e) testing, run:
+### Executando Testes de Ponta-a-Ponta
+Para executar testes e2e, utilize:
 
-```bash
+```
 ng e2e
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+---
 
-## Additional Resources
+### Estrutura do Projeto
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- `src/app/dashboard`:
+  - Contém componentes para exibir diferentes seções do painel, como "Years with Multiple Winners", "Top Studios", "Producer Intervals", e "Movies by Year".
+
+- `src/app/services/movies.service.ts`:
+  - Serviço responsável por realizar chamadas HTTP para a API backend.
+
+---
+
+### Notas Adicionais
+- Certifique-se de que o `CommonModule` e `FormsModule` estão importados onde necessário para suportar diretivas como `*ngIf`, `*ngFor`, e `[(ngModel)]`.
+- Para mais informações sobre o Angular CLI, visite [Angular CLI Overview and Command Reference](https://angular.io/cli).
