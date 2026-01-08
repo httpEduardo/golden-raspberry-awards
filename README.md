@@ -208,7 +208,7 @@ Ensure `CommonModule` and `FormsModule` are imported in modules that use:
 - `[(ngModel)]` two-way binding (requires `FormsModule`)
 
 **4. Build Failures**
-- Clear the Angular cache: `npm run ng cache clean`
+- Clear the Angular cache: `ng cache clean`
 - Delete `node_modules` and reinstall: `rm -rf node_modules && npm install`
 - Check TypeScript version compatibility
 
